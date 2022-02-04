@@ -1,2 +1,4 @@
-# Leetcoding
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+# Leetcoding: Collection of all LeetCode questions solved by me
+
+## `Consistency is the key to success.` </br>
+
