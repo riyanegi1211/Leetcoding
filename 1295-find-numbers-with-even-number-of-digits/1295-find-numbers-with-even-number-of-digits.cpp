@@ -11,7 +11,7 @@ public:
                 nums[i]/=10;
                 count++;
             }
-            if(count%2==0)
+            if(!(count&1))
                 ans++;
         }
         return ans;
