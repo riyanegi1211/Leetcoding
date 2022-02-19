@@ -1,7 +1,8 @@
 class Solution {
 public:
     int myAtoi(string s) {
-        int sign=1,base=0,i=0;
+        bool sign=true;
+        int base=0,i=0;
         int n=s.size();
         if(n==0) return 0;
         while(i<n && s[i]==' ')
@@ -9,7 +10,7 @@ public:
         if(i==n) return 0;
         if(s[i]=='-')
         {
-            sign=-1;
+            sign=false;
             i++;
         }
         else if(s[i]=='+')
@@ -23,7 +24,7 @@ public:
             out+=(s[i]-'0');
             i++;
         }
-        if(sign==-1)
+        if(sign==false)
             out=-1*out;
         if(out<=INT_MIN)
             return INT_MIN;
