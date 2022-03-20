@@ -4,7 +4,8 @@ public:
     {
         if(nums==0)
             return result;
-        if(nums>=1000)
+        
+        else if(nums>=1000)
             return convert(nums-1000,result+'M');
         else if(nums>=900)
             return convert(nums-900,result+'C'+'M');
