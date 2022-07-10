@@ -66,27 +66,32 @@ struct Node {
 //Function to insert a node in the middle of the linked list.
 Node* insertInMiddle(Node* head, int x)
 {
-	Node* temp =head;
-Node* ins = new Node(x);
-int size=1;
-while(temp->next != NULL){
-    temp=temp->next;
-    size++;
-}
-if(size%2==0){
-    size=(size/2);
-}
-else{
-    size=(size/2)+1;
-}
-temp=head;
-for(int i=1;i<size;i++){
-    temp=temp->next;
-}
-Node* temp2=temp->next;
-ins->next=temp2;
-temp->next=ins;
-   return head;
+	int count=1;
+	Node* ptr=head;
+	Node* temp=new Node(x);
+	while(ptr->next!=NULL)
+	{
+	    ptr=ptr->next;
+	    count++;
+	}
+	
+	if(count%2==0)
+	{
+	    count=(count/2);
+	}
+	else
+	{
+	    count=(count/2)+1;
+	}
+	ptr=head;
+	for(int i=1;i<count;i++)
+	{
+	    ptr=ptr->next;
+	}
+	Node* ptr2=ptr->next;
+	temp->next=ptr2;
+	ptr->next=temp;
+	return head;
 }
 
 
