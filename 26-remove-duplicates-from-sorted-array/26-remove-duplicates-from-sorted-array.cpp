@@ -1,10 +1,18 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        vector<int> ::iterator it;
-        it=std::unique(nums.begin(),nums.end());
-        nums.resize(std::distance(nums.begin(),it));
-        int count=nums.size();
-        return count;
+        int n=nums.size();
+        if(n==0)
+            return n;
+        int i=0;   
+        for(int j=1;j<n;j++)
+        {
+            if(nums[i]!=nums[j])
+            {
+                i++;
+                nums[i]=nums[j];
+            }
+         }
+        return i+1;
     }
 };
