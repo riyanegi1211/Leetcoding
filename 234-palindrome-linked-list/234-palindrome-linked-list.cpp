@@ -11,15 +11,15 @@
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
-        vector<int> ans;
+        vector<int>ans;
         ListNode* temp=head;
-        while(temp!=NULL)
+        while(temp)
         {
             ans.push_back(temp->val);
             temp=temp->next;
         }
         int n=ans.size()-1;
-        for(int i=n;i>=0;i--)
+        for(int i=n;i>0;i--)
         {
             if(ans[i]==head->val)
             {
@@ -31,4 +31,3 @@ public:
         return true;
     }
 };
-
