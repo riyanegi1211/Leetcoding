@@ -10,7 +10,8 @@ public:
             if(vec[i]!=0)
             {
                 count++;
-                for(int j=i*2; j<n; j+=i) vec[j]=0;         
+                for(int j=i*2; j<n; j+=i) 
+                    vec[j]=0;         
             }
         }
     return count;
