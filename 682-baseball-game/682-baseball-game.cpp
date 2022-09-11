@@ -2,7 +2,8 @@ class Solution {
 public:
     int calPoints(vector<string>& ops) {
         stack<int>v;
-        for(int i=0;i<ops.size();i++){
+        int n=ops.size();
+        for(int i=0;i<n;i++){
             if(ops[i]=="C"){
                 v.pop();
             }
