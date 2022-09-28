@@ -22,7 +22,9 @@ public:
         int i=0,j=ans.size()-1;
         while(i<j)
         {
-            sum=max(sum,ans[i++]+ans[j--]);
+            sum=max(sum,ans[i]+ans[j]);
+            i++;
+            j--;
         }
         return sum;
     }
