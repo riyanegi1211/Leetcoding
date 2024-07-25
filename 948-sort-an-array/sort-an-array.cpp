@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> sortArray(vector<int>& nums) {
         int n = nums.size();
-        vector<int> temp(n);  // Create an auxiliary array
+        vector<int> temp(n);  
         mergeSort(nums, temp, 0, n-1);
         return nums;
     }
