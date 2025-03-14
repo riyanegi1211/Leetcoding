@@ -25,8 +25,7 @@ private:
 
         for (int pileIndex = 0; pileIndex < candies.size(); pileIndex++) {
             maxNumOfChildren +=
-                candies[pileIndex] /
-                numOfCandies;  
+                candies[pileIndex]/numOfCandies;  
         }
 
         return maxNumOfChildren >= k;
