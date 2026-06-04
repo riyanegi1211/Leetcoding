@@ -12,10 +12,9 @@ class Solution {
         int waviness = 0;
 
         for(int i=1;i<s.length()-1;i++){
-            boolean isPeak= s.charAt(i)>s.charAt(i-1) && s.charAt(i)>s.charAt(i+1);
-            boolean isValley= s.charAt(i)<s.charAt(i-1) && s.charAt(i)<s.charAt(i+1);
-
-            if(isPeak || isValley)
+            boolean isWaviness= (s.charAt(i)>s.charAt(i-1) && s.charAt(i)>s.charAt(i+1))
+             || (s.charAt(i)<s.charAt(i-1) && s.charAt(i)<s.charAt(i+1));
+            if(isWaviness)
                 waviness++;
         }
         return waviness;
